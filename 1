@@ -1,0 +1,52 @@
+// Purpose:   To calculate the student's grade based on midterm and final scores.
+// Author:     Matthew Johnson
+// Date:  4.8.2019
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	//declare variables
+
+	int midScore = 0;
+	int finalScore = 0;
+
+	int totalScore = 0;
+
+	char grade;
+
+	//input grades
+
+	cout << "Input the student's midterm grade: ";
+	cin >> midScore;
+	cout << "Input the student's final exam grade: ";
+	cin >> finalScore;
+
+	//calculate the total score
+
+	totalScore = midScore + finalScore;		//sum of scores to calculate the letter grade
+
+	//display letter grade
+
+	if (totalScore < 240)
+		grade = F;
+	if ((totalScore >= 240) && (totalScore <= 279))
+		grade = D;
+	if ((totalScore >= 280) && (totalScore <= 319))
+		grade = C;
+	if ((totalScore >= 320) && (totalScore <= 359))
+		grade = B;
+	if (totalScore > 360)
+		grade = A;
+
+
+	cout << "The letter grade for the student is: " << grade << endl;
+
+	//decide to repeat or not
+
+
+	system("pause");
+	return 0;
+}// end of main function
